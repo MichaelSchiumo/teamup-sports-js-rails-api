@@ -5,5 +5,11 @@ class TeamSerializer < ActiveModel::Serializer
     @team = team_object
   end
 
+  def to_serialized_json
+    @team.to_json(:include => {
+      :only => [:name, :color, :rank]
+    })
+  end
+
   has_many :players
 end
