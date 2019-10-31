@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
 
   def index
     players = Player.all
-    json_response( players)
+    render json: players
   end
 
   def create
@@ -12,11 +12,14 @@ class PlayersController < ApplicationController
   end
 
   def show
-    json_response(player)
+    render json: {id: player.id, name: player.name, position: player.position,
+      number: player.number, captain: player.captain, hometown: player.hometown}
   end
 
+  render json: {id: bird.id, name: bird.name, species: bird.species }
+
   def update
-        player.update(player_params)
+    player.update(player_params)
   end
 
   def destroy

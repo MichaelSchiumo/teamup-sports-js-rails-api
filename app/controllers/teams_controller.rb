@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
 
   def show
     team = Team.find_by(id: params[:id])
-    render json: team
+    render json: {id: team.id, name: team.name, color: team.color, rank: team.rank}
   end
 
   def update
