@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
 
   def index
     teams = Team.all
-    render json: teams, only: [:id, :name, :color, :rank]
+    render json: TeamSerializer.new(teams).to_serialized_json
   end
 
   def create
@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
 
   def show
     team = Team.find_by(id: params[:id])
-    render json: {id: team.id, name: team.name, color: team.color, rank: team.rank}
+    render json: TeamSerializer.new(team).to_serialized_json
   end
 
   def update

@@ -1,0 +1,18 @@
+53
+
+>> u = User.create :userid => "myuserid", :password => "mypasswd", :user_first_name => "test", :user_last_name => "testovich", :user_status => "mystatus", :user_type => "mytype"
+
+bird_b = Bird.create(name: "Grackle", species: "Quiscalus Quiscula")
+
+
+Errors
+
+1. Cannot create player in console, returns false and rolls back
+
+2. Do I need nested resources??
+
+3. In Players controller, can I use include in the index/show actions
+
+4. Do the serializers need to inherit from active model serializer?
+
+5. What do we need to put in the to_json serializer method 
