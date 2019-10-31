@@ -16,7 +16,18 @@ class PlayersController < ApplicationController
 
   def update
     @player.update(player_params)
-  end  
+  end
+
+  def destroy
+    @player.destroy
+    head :no_content
+  end
+
+  private
+
+  def player_params
+    params.require(:player).permit(:name, :position, :number, :captain, :hometown)
+  end      
 end
 
 
