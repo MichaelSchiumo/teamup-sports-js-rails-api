@@ -1,9 +1,9 @@
 class TeamsController < ApplicationController
-  before_action :set_team, only: [:show, :update, :destroy]
+  before_action :set_team, only: [:update, :destroy]
 
   def index
-    @teams = Team.all
-    json_response(@teams)
+    teams = Team.all
+    render json: teams
   end
 
   def create
@@ -12,7 +12,8 @@ class TeamsController < ApplicationController
   end
 
   def show
-    json_reponse(@team)
+    bird = Bird.find_by(id: params[:id])
+    render json: bird
   end
 
   def update
