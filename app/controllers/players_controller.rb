@@ -9,6 +9,14 @@ class PlayersController < ApplicationController
     @player = Player.create!(player_params)
     json_response(@player, :created)
   end
+
+  def show
+    json_response(@player)
+  end
+
+  def update
+    @player.update(player_params)
+  end  
 end
 
 
