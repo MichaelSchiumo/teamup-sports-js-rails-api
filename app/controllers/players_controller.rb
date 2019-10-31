@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
 
   def index
     players = Player.all
-    render json: players, only: [:id, :name, :position, :number, :captain, :hometown]
+    render json: PlayerSerializer.new(players).to_serialized_json
   end
 
   def create
@@ -18,12 +18,7 @@ class PlayersController < ApplicationController
 
   def show
     player = Player.find_by(id: params[:id])
-
-    if player
-      render json: {id: player.id, name: player.name, position: player.position,
-      number: player.number, captain: player.captain, hometown: player.hometown, team: player.team}
-    else
-      render json: { message: 'No player found with that ID.' }
+    render json: PlayerSerializer.new(player).to_serialized_json
   end
 
   def update
