@@ -1,5 +1,5 @@
 class PlayersController < ApplicationController
-  before_action :set_player, only: [:show, :update, :destroy]
+  before_action :set_player, only: [:update, :destroy]
 
   def index
     players = Player.all
@@ -7,16 +7,24 @@ class PlayersController < ApplicationController
   end
 
   def create
-    player = Player.create!(player_params)
-    json_response(player, :created)
+    player = team.player.build(player_params)
+
+    if meal.save
+      json_response(player, :created)
+    else
+      render json: { message: 'Player was not created.' }
+    end
   end
 
   def show
-    render json: {id: player.id, name: player.name, position: player.position,
-      number: player.number, captain: player.captain, hometown: player.hometown}
-  end
+    player = Player.find_by(id: params[:id])
 
-  render json: {id: bird.id, name: bird.name, species: bird.species }
+    if player
+      render json: {id: player.id, name: player.name, position: player.position,
+      number: player.number, captain: player.captain, hometown: player.hometown, team: player.team}
+    else
+      render json: { message: 'No player found with that ID.' }
+  end
 
   def update
     player.update(player_params)
@@ -30,7 +38,7 @@ class PlayersController < ApplicationController
   private
 
   def player_params
-    params.require(:player).permit(:name, :position, :number, :captain, :hometown)
+    params.require(:player).permit(:name, :position, :number, :captain, :hometown, :team_id)
   end
 
   def set_player
