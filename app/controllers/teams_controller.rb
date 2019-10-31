@@ -3,7 +3,7 @@ class TeamsController < ApplicationController
 
   def index
     teams = Team.all
-    render json: teams
+    render json: teams, only: [:id, :name, :color, :rank]
   end
 
   def create
