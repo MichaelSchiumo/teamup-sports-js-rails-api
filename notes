@@ -15,4 +15,7 @@ Errors
 
 4. Do the serializers need to inherit from active model serializer?
 
-5. What do we need to put in the to_json serializer method 
+5. What do we need to put in the to_json serializer method
+
+6. how does Fast JSON affect our data?
+  -it is included in both of my serializers
