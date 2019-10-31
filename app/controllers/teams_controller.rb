@@ -17,6 +17,17 @@ class TeamsController < ApplicationController
   def update
     @team.update(team_params)
     head :no_content
+  end
+
+  def destroy
+    @team.destroy
+    head :no_content
+  end
+
+  private
+
+  def team_params
+    params.require(:team).permit(:name, :color, :rank)
   end  
 
 end
