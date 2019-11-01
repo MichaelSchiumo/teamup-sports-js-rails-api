@@ -1,4 +1,4 @@
-class PlayerSerializer < ActiveModel::Serializer
+class PlayerSerializer 
     include FastJsonapi::ObjectSerializer
 
   attributes :team_id, :name, :position, :number, :captain, :hometown
