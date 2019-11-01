@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
 
   def index
     players = Player.all
-    render json: PlayerSerializer.new(players).to_serialized_json
+    render json: PlayerSerializer.new(players)
   end
 
   def create
@@ -18,7 +18,7 @@ class PlayersController < ApplicationController
 
   def show
     player = Player.find_by(id: params[:id])
-    render json: PlayerSerializer.new(player).to_serialized_json
+    render json: PlayerSerializer.new(player)
   end
 
   def update
