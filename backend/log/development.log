@@ -465,3 +465,126 @@ Processing by TeamsController#show as HTML
 Completed 200 OK in 232ms (Views: 0.3ms | ActiveRecord: 50.0ms)
 
 
+Started GET "/" for ::1 at 2019-11-01 09:17:25 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/michael/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/michael/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (6.4ms)
+Completed 200 OK in 54ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-01 09:17:31 -0400
+Processing by TeamsController#index as HTML
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ActiveModel::Serializer):
+  
+app/serializers/team_serializer.rb:1:in `<main>'
+app/controllers/teams_controller.rb:6:in `index'
+Started GET "/teams/1" for ::1 at 2019-11-01 09:18:13 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (18.1ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:15
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 18.9ms)
+
+
+  
+NameError (uninitialized constant ActiveModel::Serializer):
+  
+app/serializers/team_serializer.rb:1:in `<main>'
+app/controllers/teams_controller.rb:16:in `show'
+Started GET "/teams" for ::1 at 2019-11-01 09:24:25 -0400
+Processing by TeamsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/michael/teamup-sports-api/backend/app/serializers/team_serializer.rb:13: syntax error, unexpected ')', expecting =>
+    }, :player)
+              ^
+/Users/michael/teamup-sports-api/backend/app/serializers/team_serializer.rb:17: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/team_serializer.rb:13: syntax error, unexpected ')', expecting =>
+app/serializers/team_serializer.rb:17: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:6:in `index'
+Started GET "/teams" for ::1 at 2019-11-01 09:24:54 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (13.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/serializers/team_serializer.rb:11
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 14.5ms)
+
+
+  
+NoMethodError (undefined method `only' for #<Team:0x00007f92722736a0>):
+  
+app/serializers/team_serializer.rb:11:in `to_serialized_json'
+app/controllers/teams_controller.rb:6:in `index'
+Started GET "/teams" for ::1 at 2019-11-01 09:25:13 -0400
+Processing by TeamsController#index as HTML
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/michael/teamup-sports-api/backend/app/serializers/team_serializer.rb:12: syntax error, unexpected =>
+      only: => [:name, :color, :rank]
+            ^~
+/Users/michael/teamup-sports-api/backend/app/serializers/team_serializer.rb:13: syntax error, unexpected '}', expecting end
+    })
+    ^
+/Users/michael/teamup-sports-api/backend/app/serializers/team_serializer.rb:17: syntax error, unexpected end-of-input, expecting end):
+  
+app/serializers/team_serializer.rb:12: syntax error, unexpected =>
+app/serializers/team_serializer.rb:13: syntax error, unexpected '}', expecting end
+app/serializers/team_serializer.rb:17: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:6:in `index'
+Started GET "/teams" for ::1 at 2019-11-01 09:25:53 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (6.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/serializers/team_serializer.rb:11
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.1ms)
+
+
+  
+NoMethodError (undefined method `serializable_hash' for "Dynamo":String):
+  
+app/serializers/team_serializer.rb:11:in `to_serialized_json'
+app/controllers/teams_controller.rb:6:in `index'
+Started GET "/teams" for ::1 at 2019-11-01 09:27:25 -0400
+Processing by TeamsController#index as HTML
+Completed 200 OK in 39ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams/1" for ::1 at 2019-11-01 09:27:32 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (54.0ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:15
+Completed 200 OK in 64ms (Views: 0.2ms | ActiveRecord: 54.9ms)
+
+
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2019-11-01 09:28:32 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/michael/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/michael/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (4.4ms)
+Completed 200 OK in 42ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-01 09:28:37 -0400
+Processing by TeamsController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-01 09:29:00 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (21.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:6
+  [1m[35m (14.0ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:6
+Completed 200 OK in 186ms (Views: 142.4ms | ActiveRecord: 37.0ms)
+
+

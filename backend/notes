@@ -19,3 +19,10 @@ Errors
 
 6. how does Fast JSON affect our data?
   -it is included in both of my serializers
+
+
+7. Rails as an API lab
+  - set up relationships
+  - set up options hash
+    -defined in controller
+      -after fetch to index, we will receive all of the teams and all of the relationships
