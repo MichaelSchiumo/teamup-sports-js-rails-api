@@ -2,8 +2,10 @@ let data = {};
 
 function fetchTeams() {
     return fetch('http://localhost:3000/teams')
-      .then(response => respose.json())
-      .then(result => renderTeams(json))
+      .then(response => response.json())
+      //promise
+      // .then(result => renderTeams(json))
+      .then(result => console.log(result))
   };
 
 
@@ -19,6 +21,10 @@ const getTeams = async () => {
   renderTeams(teams)
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  fetchTeams();
+})
+
 
 
 
@@ -29,20 +35,6 @@ const getTeams = async () => {
 
 
 ////////////////////////////////////////////////////////////////////////////
-
-const http = require('http');
-
-// Create an instance of the http server to handle HTTP requests
-let app = http.createServer((req, res) => {
-    // Set a response type of plain text for the response
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-
-    // Send back a response and end the connection
-});
-
-// Start the server on port 3000
-app.listen(3000, '127.0.0.1');
-console.log('Node server running on port 3000');
 
 
 
