@@ -7,6 +7,13 @@ class Teams {
   }
 }
 
+static buildTeamObjects(teams) {
+  return teams.map((team) => {
+    return new Team(team.id, team.name, team.color, team.rank)
+  })
+}
+
+
 class Players {
   constructor(id, name, position, number, captain, hometown) {
     this.id = id;
