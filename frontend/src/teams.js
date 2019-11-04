@@ -12,4 +12,18 @@ static buildTeamObjects(teams) {
   })
 }
 
+  renderTeam() {
+    const teamDiv = document.createElement('div')
+    team.className = 'team-card'
+    teamDiv.dataset.id = this.id
+    // teamDiv.dataset.userID = this.user.id
+    teamText.className = 'text'
+    teamDiv.appendChild(teamText)
+    console.log(this)
+
+    teamText.innerHTML = `${this.name}`
+
+    return teamDiv
+  }
+
 }
