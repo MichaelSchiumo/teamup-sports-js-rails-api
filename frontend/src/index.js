@@ -3,6 +3,7 @@ const TEAMS_URL = `${BASE_URL}/teams`;
 const PlAYERS_URL = `${BASE_URL}/players`;
 
 
+let teamsContainer = document.querySelector('div.teams-container')
 
 document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
@@ -22,10 +23,47 @@ function fetchTeams() {
 
 function renderTeams(teamsArray) {
   teamsArray.forEach(team => {
-    console.log(team)
+    debugger
+    const div = document.createElement("div");
+    div.innerHTML = `${team.attributes.name}`
+    teamsContainer.appendChild(div)
+    const teamColorEl = document.createElement("h2")
+    teamColorEl.innerHTML = `${team.attributes.color}`
+    div.appendChild(teamColorEl)
 
   })
 }
+
+
+function renderTrainers(json) {
+  const main = document.getElementsByTagName("main")[0];
+  json.forEach(trainer => {
+    const div = document.createElement("div");
+    div.setAttribute("class", "card");
+    div.setAttribute("data-id", `${trainer.id}`);
+    main.appendChild(div);
+    const p = document.createElement("p");
+    p.textContent = `${trainer.name}`;
+    div.appendChild(p);
+    const addButton = document.createElement("button");
+    addButton.setAttribute("data-trainer-id", `${trainer.id}`);
+    addButton.textContent = "Add Pokemon";
+    addButton.addEventListener("click", onClickAdd);
+    div.appendChild(addButton);
+    const ul = document.createElement("ul");
+    div.appendChild(ul);
+  });
+}
+
+
+
+
+
+
+
+
+
+
 
 // const getTeams = async () => {
 //   teams = await fetchTeams()
@@ -58,7 +96,7 @@ const generateTeamForm = () => {
 
     form.id = "create-team"
 
-    formInput.placeholder = "team text"
+    formInput.placeholder = "New Team"
     formInput.id = "team-form-text"
     formInput.name = "formInput"
 
@@ -73,24 +111,6 @@ const generateTeamForm = () => {
 }
 
 
-
-const renderTeamForm = () => {
-    const form = generateTeamForm()
-    document.body.appendChild(form)
-
-     form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        newTodo = {
-            text: e.target.elements.formInput.value,
-            complete: false
-        }
-
-        form.remove()
-    })
-}
-
-let teamsContainer = document.querySelector('div.teams-container')
 
 function newTeamButton() {
     let button = document.createElement('button')
