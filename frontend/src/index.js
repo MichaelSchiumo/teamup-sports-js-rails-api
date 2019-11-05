@@ -1,56 +1,103 @@
-let teams = [];
+const BASE_URL = "http://localhost:3000";
+const TEAMS_URL = `${BASE_URL}/teams`;
+const PlAYERS_URL = `${BASE_URL}/players`;
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  generateTeamForm();
+  fetchTeams();
+  teamsContainer.appendChild(generateTeamForm());
+});
+
 
 function fetchTeams() {
-    return fetch('http://localhost:3000/teams')
+  return fetch(TEAMS_URL)
       .then(response => response.json())
-      //promise
-      // .then(result => renderTeams(json))
-      .then(result => console.log(result))
+      .then(json => {
+        renderTeams(json.data);
+        //here is where we fetch players
+      })
   };
 
+function renderTeams(teamsArray) {
+  teamsArray.forEach(team => {
+    console.log(team)
 
-function renderTeams(json, filter) {
-  for (team in json) {
-    let name = document.createElement('')
-
-  }
+  })
 }
 
-const getTeams = async () => {
-  teams = await fetchTeams()
-  renderTeams(teams)
+// const getTeams = async () => {
+//   teams = await fetchTeams()
+//   renderTeams()
+// }
+
+
+function saveTeam() {
+  //post request with team data to store in backend
+  return (
+        fetch("http://localhost:3000/teams", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(teamData)
+        })
+      )
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  generateForm();
-  fetchTeams();
-})
 
 
 
 
+const generateTeamForm = () => {
+    const form = document.createElement('teamForm')
+    const formInput = document.createElement('input')
+    const formSubmit = document.createElement('button')
+
+    form.id = "create-team"
+
+    formInput.placeholder = "team text"
+    formInput.id = "team-form-text"
+    formInput.name = "formInput"
+
+    formSubmit.textContent = "Submit"
+    formSubmit.id = "form-submit"
 
 
-const generateForm = () => {
-  let form =  document.createElement('form')
-  let formInput = document.createElement('input')
-  let formSubmit = document.createElement('button')
+    form.appendChild(formInput)
+    form.appendChild(formSubmit)
 
-  // nameInput.setAttribute('name', 'name')
-  //   <input name='name' value=''/>
+    return form
+}
 
-  form.id = "create-team"
 
-  formInput.placeholder = "Team Text"
-  formInput.id = "form-text"
-  formInput.name = "formInput"
 
-  formSubmit.textContent = "Submit"
-  formSubmit.id = "form-submit"
+const renderTeamForm = () => {
+    const form = generateTeamForm()
+    document.body.appendChild(form)
 
-  form.appendChild(formInput)
-  form.appendChild(formSubmit)
+     form.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-  return form
+        newTodo = {
+            text: e.target.elements.formInput.value,
+            complete: false
+        }
 
+        form.remove()
+    })
+}
+
+let teamsContainer = document.querySelector('div.teams-container')
+
+function newTeamButton() {
+    let button = document.createElement('button')
+    button.textContent = 'Create a Team'
+    button.addEventListener('click', function() {
+        teamsContainer.innerHTML = ''
+        teamsContainer.appendChild(generateTeamForm())
+    })
+    return button
 }
