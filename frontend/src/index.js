@@ -23,16 +23,24 @@ function fetchTeams() {
 
 function renderTeams(teamsArray) {
   teamsArray.forEach(team => {
-    debugger
-    const div = document.createElement("div");
-    div.innerHTML = `${team.attributes.name}`
-    teamsContainer.appendChild(div)
-    const teamColorEl = document.createElement("h2")
-    teamColorEl.innerHTML = `${team.attributes.color}`
-    div.appendChild(teamColorEl)
+    const h2 = document.createElement("h2");
+    h2.innerHTML = `${team.attributes.name}`
+    teamsContainer.appendChild(h2)
 
+    const teamColorEl = document.createElement("h4")
+    teamColorEl.innerHTML = `Color: ${team.attributes.color.charAt(0).toUpperCase() + team.attributes.color.slice(1)}`
+    h2.appendChild(teamColorEl)
+
+    const teamRank = document.createElement("h4")
+    teamRank.innerHTML = `Rank: ${team.attributes.rank}`
+    h2.appendChild(teamRank)
+
+
+    console.log(team)
   })
 }
+
+
 
 
 function renderTrainers(json) {
