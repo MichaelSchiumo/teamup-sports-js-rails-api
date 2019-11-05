@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
-  displayPlayers();
 });
 
 
@@ -24,6 +23,7 @@ function fetchTeams() {
 
 function renderTeams(teamsArray) {
   teamsArray.forEach(team => {
+
     const h2 = document.createElement("h2");
     h2.innerHTML = `${team.attributes.name}`
     teamsContainer.appendChild(h2)
@@ -35,11 +35,29 @@ function renderTeams(teamsArray) {
     const teamRank = document.createElement("h4")
     teamRank.innerHTML = `Rank: ${team.attributes.rank}`
     h2.appendChild(teamRank)
+    //edit button
 
-
-    console.log(team)
   })
 }
+
+// function onClickAdd(event) {
+//   const newTeamButton = event.currentTarget;
+//   const teamId = newTeamButton.getAttribute('data-team-id');
+//   fetchTeamAdd();
+// }
+
+
+// function onClickAdd(event) {
+//   const addButton = event.currentTarget;
+//   const list = addButton.parentElement.getElementsByTagName("li");
+//   if (list.length < 6) {
+//     const trainerId = addButton.getAttribute("data-trainer-id");
+//     fetchPokemonAdd(trainerId);
+//   } else {
+//     alert("Stop being so greedy!");
+//   }
+// }
+
 
 
 
@@ -91,20 +109,26 @@ function saveTeam() {
 
 const generateTeamForm = () => {
     const form = document.createElement('teamForm')
-    const formInput = document.createElement('input')
+    // const formInput = document.createElement('input')
     const formSubmit = document.createElement('button')
+    //write loop to create multiple inputs
+    //append inputs to form
 
     form.id = "create-team"
 
-    formInput.placeholder = "New Team"
-    formInput.id = "team-form-text"
-    formInput.name = "formInput"
+    let nameInput = document.createElement("input")
+    nameInput.setAttribute('name', 'name')
+    nameInput.placeholder = "Team Name"
+    form.appendChild(nameInput)
+
+    // formInput.id = "team-form-text"
+    // formInput.name = "formInput"
 
     formSubmit.textContent = "Submit"
     formSubmit.id = "form-submit"
 
 
-    form.appendChild(formInput)
+    // form.appendChild(formInput)
     form.appendChild(formSubmit)
 
     return form
