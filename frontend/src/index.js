@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
+  displayPlayers();
 });
 
 
@@ -62,15 +63,6 @@ function renderTrainers(json) {
     div.appendChild(ul);
   });
 }
-
-
-
-
-
-
-
-
-
 
 
 // const getTeams = async () => {
