@@ -3,17 +3,26 @@ class TeamsController < ApplicationController
 
   def index
     teams = Team.all
-    render json: TeamSerializer.new(teams)
+    options = {
+      include: [:players]
+    }
+    render json: TeamSerializer.new(teams, options)
   end
 
   def create
     team = Team.create!(team_params)
+    options = {
+      include: [:players]
+    }
     json_response(team, :created)
   end
 
   def show
     team = Team.find_by(id: params[:id])
-    render json: TeamSerializer.new(team)
+    options = {
+      include: [:players]
+    }
+    render json: TeamSerializer.new(team, options)
   end
 
   def update
