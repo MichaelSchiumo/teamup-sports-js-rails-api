@@ -4,13 +4,17 @@ const PlAYERS_URL = `${BASE_URL}/players`;
 
 
 let teamsContainer = document.querySelector('div.teams-container')
+let playersContainer = document.querySelector('div.players-container')
 let teamWrapper = document.createElement("div")
+let playerWrapper = document.createElement("div")
+playerWrapper.id = 'player-wrapper'
 teamWrapper.id = 'team-wrapper'
 
 document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
+  fetchPlayers();
 
   document.querySelector('#create-team').addEventListener("submit", function(e) {
     e.preventDefault();
@@ -34,15 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function fetchPlayers() {
-  console.log("test")
-  return fetch(PlAYERS_URL)
-    .then(response => response.json())
-    .then(json => {
-      renderPlayers(json.data)
-    })
-}
-
 function fetchTeams() {
   console.log("test")
   return fetch(TEAMS_URL)
@@ -53,32 +48,30 @@ function fetchTeams() {
       })
   };
 
+function fetchPlayers() {
+    console.log("test")
+    return fetch(PlAYERS_URL)
+      .then(response => response.json())
+      .then(json => {
+        renderPlayers(json.data)
+      })
+}
+
 
 function renderTeams(teamsArray) {
   // let teamWrapper = document.createElement("div")
   // teamWrapper.id = 'team-wrapper'
   teamsArray.forEach(team => {
-
-
     let newTeam = new Team(team.attributes)
-
-    // const h2 = document.createElement("h2");
-    // h2.innerHTML = `${team.attributes.name}`
-    // teamsContainer.appendChild(teamWrapper)
-    // teamWrapper.appendChild(h2)
-    //
-    // const teamColorEl = document.createElement("h4")
-    // teamColorEl.innerHTML = `Color: ${team.attributes.color.charAt(0).toUpperCase() +
-    //   team.attributes.color.slice(1)}`
-    // h2.appendChild(teamColorEl)
-    //
-    // const teamRank = document.createElement("h4")
-    // teamRank.innerHTML = `Rank: ${team.attributes.rank}`
-    // h2.appendChild(teamRank)
-    // teamWrapper.appendChild(h2)
-    // debugger
     addTeam(newTeam)
 
+  })
+}
+
+function renderPlayers(playersArray) {
+  playersArray.forEach(player => {
+    let newPlayer = new Player(player.attributes)
+    addPlayer(newPlayer)
   })
 }
 
@@ -99,29 +92,13 @@ function renderTeams(teamsArray) {
 
   }
 
-// function onClickAdd(event) {
-//   const newTeamButton = event.currentTarget;
-//   const teamId = newTeamButton.getAttribute('data-team-id');
-//   fetchTeamAdd();
-// }
+function addPlayer(player) {
+  const h2 = document.createElement("h2")
+  h2.innerHTML = `${player.name}`
+  playersContainer.appendChild(playerWrapper)
+  playerWrapper.appendChild(h2)
 
-
-// function onClickAdd(event) {
-//   const addButton = event.currentTarget;
-//   const list = addButton.parentElement.getElementsByTagName("li");
-//   if (list.length < 6) {
-//     const trainerId = addButton.getAttribute("data-trainer-id");
-//     fetchPokemonAdd(trainerId);
-//   } else {
-//     alert("Stop being so greedy!");
-//   }
-// }
-
-
-// const getTeams = async () => {
-//   teams = await fetchTeams()
-//   renderTeams()
-// }
+}
 
 
 //what do we do after saveTeam?
