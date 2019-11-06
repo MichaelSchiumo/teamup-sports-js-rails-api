@@ -6,10 +6,10 @@ class Team {
     this.rank = team.rank;
   }
 
-  static buildTeamObjects(teams) {
-    return teams.map((team) => {
-      return new Team(team.id, team.name, team.color, team.rank)
-    })
-  }
+  // static buildTeamObjects(teams) {
+  //   return teams.map((team) => {
+  //     return new Team(team.id, team.name, team.color, team.rank)
+  //   })
+  // }
 
 }

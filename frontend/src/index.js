@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
   fetchPlayers();
+  playersContainer.appendChild(generatePlayerForm());
 
   document.querySelector('#create-team').addEventListener("submit", function(e) {
     e.preventDefault();
@@ -35,11 +36,29 @@ document.addEventListener("DOMContentLoaded", function() {
     addTeam(teamData);
   })
 
+  document.querySelector('#create-player').addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let playerData = {
+      name: e.target.elements.name.value,
+      position: e.target.elements.position.value,
+      number: e.target.elements.number.value,
+      hometown: e.target.elements.hometown.value
+    }
+
+    e.target.elements.name.value = '';
+    e.target.elements.position.value = '';
+    e.target.elements.number.value = '';
+    e.target.elements.hometown.value = '';
+
+    savePlayer(playerData)
+    addPlayer(playerData)
+  })
+
 });
 
 
 function fetchTeams() {
-  console.log("test")
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
@@ -104,19 +123,8 @@ function addPlayer(player) {
 //what do we do after saveTeam?
 
 function saveTeam(team) {
-  //post request with team data to store in backend
-  //assign team
-  //get each individual string
-
-  // let teamData = {
-  //   name: team.name.value,
-  //   color: team.color.value,
-  //   rank: team.rank.value
-  // }
-
-
   return (
-        fetch("http://localhost:3000/teams", {
+        fetch(TEAMS_URL, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -125,6 +133,19 @@ function saveTeam(team) {
           body: JSON.stringify(team)
         })
       )
+}
+
+function savePlayer(player) {
+  return (
+    fetch(PlAYERS_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(player)
+    })
+  )
 }
 
 
@@ -157,4 +178,39 @@ const generateTeamForm = () => {
     form.appendChild(formSubmit)
 
     return form
+}
+
+const generatePlayerForm = () => {
+
+  const form = document.createElement('form')
+
+  const formSubmit = document.createElement('button')
+  formSubmit.textContent = "Create Player"
+
+  form.id = 'create-player'
+  formSubmit.id = 'form-submit'
+
+  let nameInput = document.createElement('input')
+  nameInput.setAttribute('name', 'name')
+  nameInput.placeholder = "Player Name"
+  form.appendChild(nameInput)
+
+  let positionInput = document.createElement('input')
+  positionInput.setAttribute('name', 'position')
+  positionInput.placeholder = "Player Position"
+  form.appendChild(positionInput)
+
+  let jerseyNumberInput = document.createElement('input')
+  jerseyNumberInput.setAttribute('name', 'number')
+  jerseyNumberInput.placeholder = "Jersey Number"
+  form.appendChild(jerseyNumberInput)
+
+  let hometownInput = document.createElement('input')
+  hometownInput.setAttribute('name', 'hometown')
+  hometownInput.placeholder = "Player's Hometown"
+  form.appendChild(hometownInput)
+
+  form.appendChild(formSubmit)
+
+  return form
 }
