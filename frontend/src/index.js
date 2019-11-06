@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
+
   document.querySelector('#create-team').addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -20,29 +21,38 @@ document.addEventListener("DOMContentLoaded", function() {
       rank: e.target.elements.rank.value
     }
 
-//reset form fields
-  e.target.elements.name.value = '';
-  e.target.elements.color.value = '';
-  e.target.elements.rank.value = '';
+//reset form fields upon submit
+    e.target.elements.name.value = '';
+    e.target.elements.color.value = '';
+    e.target.elements.rank.value = '';
 
 
     saveTeam(teamData);
     addTeam(teamData);
   })
+
 });
 
+
+function fetchPlayers() {
+  console.log("test")
+  return fetch(PlAYERS_URL)
+    .then(response => response.json())
+    .then(json => {
+      renderPlayers(json.data)
+    })
+}
 
 function fetchTeams() {
   console.log("test")
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
-        renderTeams(json.data);
+        renderTeams(json.data)
         //here is where we fetch players
       })
   };
 
-//take our teamsArray, pass it to the buildTeamObjects function, and access the data as team.name, team.color etc.
 
 function renderTeams(teamsArray) {
   // let teamWrapper = document.createElement("div")
