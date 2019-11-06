@@ -1,11 +1,12 @@
 class Players {
-  constructor(id, name, position, number, captain, hometown) {
+  constructor(player) {
     this.id = id;
     this.name = name;
     this.position = position;
     this.number = number;
     this.captain = captain;
     this.hometown = hometown;
+    this.teamId = player.relationships.team.data.id
   }
 
 
