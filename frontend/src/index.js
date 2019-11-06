@@ -4,6 +4,8 @@ const PlAYERS_URL = `${BASE_URL}/players`;
 
 
 let teamsContainer = document.querySelector('div.teams-container')
+let teamWrapper = document.createElement("div")
+teamWrapper.id = 'team-wrapper'
 
 document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
@@ -11,16 +13,27 @@ document.addEventListener("DOMContentLoaded", function() {
   teamsContainer.appendChild(generateTeamForm());
   document.querySelector('#create-team').addEventListener("submit", function(e) {
     e.preventDefault();
-    saveTeam(e.target.elements);
-    document.querySelector('#team-wrapper').innerHTML = '';
-    // teamsContainer.innerHTML = '';
-    fetchTeams();
 
+    let teamData = {
+      name: e.target.elements.name.value,
+      color:e.target.elements.color.value,
+      rank: e.target.elements.rank.value
+    }
+
+//reset form fields
+  e.target.elements.name.value = '';
+  e.target.elements.color.value = '';
+  e.target.elements.rank.value = '';
+
+
+    saveTeam(teamData);
+    addTeam(teamData);
   })
 });
 
 
 function fetchTeams() {
+  console.log("test")
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
@@ -32,30 +45,49 @@ function fetchTeams() {
 //take our teamsArray, pass it to the buildTeamObjects function, and access the data as team.name, team.color etc.
 
 function renderTeams(teamsArray) {
-  let teamWrapper = document.createElement("div")
-  teamWrapper.id = 'team-wrapper'
+  // let teamWrapper = document.createElement("div")
+  // teamWrapper.id = 'team-wrapper'
   teamsArray.forEach(team => {
 
-    // let newTeam = new Team(team)
+
+    let newTeam = new Team(team.attributes)
+
+    // const h2 = document.createElement("h2");
+    // h2.innerHTML = `${team.attributes.name}`
+    // teamsContainer.appendChild(teamWrapper)
+    // teamWrapper.appendChild(h2)
+    //
+    // const teamColorEl = document.createElement("h4")
+    // teamColorEl.innerHTML = `Color: ${team.attributes.color.charAt(0).toUpperCase() +
+    //   team.attributes.color.slice(1)}`
+    // h2.appendChild(teamColorEl)
+    //
+    // const teamRank = document.createElement("h4")
+    // teamRank.innerHTML = `Rank: ${team.attributes.rank}`
+    // h2.appendChild(teamRank)
+    // teamWrapper.appendChild(h2)
+    // debugger
+    addTeam(newTeam)
+
+  })
+}
+
+  function addTeam(team) {
 
     const h2 = document.createElement("h2");
-    h2.innerHTML = `${team.attributes.name}`
+    h2.innerHTML = `${team.name}`
     teamsContainer.appendChild(teamWrapper)
     teamWrapper.appendChild(h2)
 
     const teamColorEl = document.createElement("h4")
-    teamColorEl.innerHTML = `Color: ${team.attributes.color.charAt(0).toUpperCase() +
-      team.attributes.color.slice(1)}`
+    teamColorEl.innerHTML = `Color: ${team.color}`
     h2.appendChild(teamColorEl)
 
     const teamRank = document.createElement("h4")
-    teamRank.innerHTML = `Rank: ${team.attributes.rank}`
+    teamRank.innerHTML = `Rank: ${team.rank}`
     h2.appendChild(teamRank)
-    //edit button
-    // teamWrapper.appendChild(h2)
 
-  })
-}
+  }
 
 // function onClickAdd(event) {
 //   const newTeamButton = event.currentTarget;
@@ -89,11 +121,12 @@ function saveTeam(team) {
   //assign team
   //get each individual string
 
-  let teamData = {
-    name: team.name.value,
-    color: team.color.value,
-    rank: team.rank.value
-  }
+  // let teamData = {
+  //   name: team.name.value,
+  //   color: team.color.value,
+  //   rank: team.rank.value
+  // }
+
 
   return (
         fetch("http://localhost:3000/teams", {
@@ -102,7 +135,7 @@ function saveTeam(team) {
             "Content-Type": "application/json",
             "Accept": "application/json"
           },
-          body: JSON.stringify(teamData)
+          body: JSON.stringify(team)
         })
       )
 }

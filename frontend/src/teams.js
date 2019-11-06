@@ -1,9 +1,9 @@
 class Team {
-  constructor(id, name, color, rank) {
-    this.id = id;
-    this.teamName = name;
-    this.teamColor = color;
-    this.teamRank = rank;
+  constructor(team) {
+    this.id = team.id
+    this.name = team.name;
+    this.color = team.color;
+    this.rank = team.rank;
   }
 
   static buildTeamObjects(teams) {
