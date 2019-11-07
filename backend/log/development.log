@@ -17856,3 +17856,1962 @@ Processing by PlayersController#index as */*
 Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/teams" for ::1 at 2019-11-07 12:20:00 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (11.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (25.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (29.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 240ms (Views: 168.4ms | ActiveRecord: 68.2ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 12:20:01 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mPlayer Load (42.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-11-07 12:20:34 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 59ms (Views: 49.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 12:20:35 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:21:37 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 28ms (Views: 21.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 12:21:37 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (15.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "players"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (326.0ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "number" integer, "captain" boolean, "hometown" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "team_id" integer)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "teams"[0m
+  ↳ db/schema.rb:26
+  [1m[35m (223.7ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "rank" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (528.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (118.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (818.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191031200518)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (315.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191031190340),
+(20191031190451);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (454.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-07 17:22:35.635548"], ["updated_at", "2019-11-07 17:22:35.635548"]]
+  ↳ db/schema.rb:13
+  [1m[35m (261.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "players"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (327.5ms)[0m  [1m[35mCREATE TABLE "players" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "position" varchar, "number" integer, "captain" boolean, "hometown" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "team_id" integer)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "teams"[0m
+  ↳ db/schema.rb:26
+  [1m[35m (90.3ms)[0m  [1m[35mCREATE TABLE "teams" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "color" varchar, "rank" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (365.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (104.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20191031200518)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (198.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191031190340),
+(20191031190451);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (112.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-07 17:22:37.162574"], ["updated_at", "2019-11-07 17:22:37.162574"]]
+  ↳ db/schema.rb:13
+  [1m[35m (79.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-11-07 17:22:37.253850"], ["key", "environment"]]
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (310.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/bin/rake:23
+  [1m[36mTeam Load (9.9ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT  "players".* FROM "players" WHERE "players"."team_id" = ? LIMIT ?[0m  [["team_id", 2], ["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-11-07 12:23:30 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 12:23:30 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+
+
+Completed 500 Internal Server Error in 3080512ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 3406031ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 3455493ms (ActiveRecord: 0.0ms)
+
+
+Completed 500 Internal Server Error in 3511437ms (ActiveRecord: 0.0ms)
+
+
+  
+  
+  
+  
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+Errno::EIO (Input/output error @ io_write - <STDOUT>):
+  
+  
+  
+  
+app/controllers/players_controller.rb:10:in `create'
+app/controllers/players_controller.rb:10:in `create'
+app/controllers/players_controller.rb:10:in `create'
+app/controllers/players_controller.rb:10:in `create'
+Started GET "/teams" for ::1 at 2019-11-07 12:24:48 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:24:48 -0500
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/michael/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PlayersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mPlayer Load (7.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 86ms (Views: 2.3ms | ActiveRecord: 7.5ms)
+
+
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 97ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/teams" for ::1 at 2019-11-07 12:25:07 -0500
+Processing by TeamsController#create as JSON
+  Parameters: {"name"=>"Z's Team", "color"=>"Blue", "rank"=>"1", "team"=>{"name"=>"Z's Team", "color"=>"Blue", "rank"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[36mTeam Create (18.9ms)[0m  [1m[32mINSERT INTO "teams" ("name", "color", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Z's Team"], ["color", "Blue"], ["rank", 1], ["created_at", "2019-11-07 17:25:07.411984"], ["updated_at", "2019-11-07 17:25:07.411984"]]
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[35m (31.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:18
+Completed 200 OK in 269ms (Views: 116.9ms | ActiveRecord: 135.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:25:41 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:25:41 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 44ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 87ms (Views: 46.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 12:25:54 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"1", "name"=>"Z", "hometown"=>"Chicago ", "number"=>"3", "position"=>"Forward", "player"=>{"name"=>"Z", "position"=>"Forward", "number"=>"3", "hometown"=>"Chicago ", "team_id"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (0.3ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Z"], ["position", "Forward"], ["number", 3], ["hometown", "Chicago "], ["created_at", "2019-11-07 17:25:54.236447"], ["updated_at", "2019-11-07 17:25:54.236447"], ["team_id", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 59ms (Views: 1.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:25:58 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:25:58 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (4.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Processing by TeamsController#index as */*
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 4.0ms)
+
+
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:26:12 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:26:12 -0500
+Processing by PlayersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/players_controller.rb:6
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:31:51 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:31:51 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Processing by PlayersController#index as */*
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/players_controller.rb:6
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 12:32:04 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"1", "name"=>"Michael", "hometown"=>"Sparta", "number"=>"5", "position"=>"Midfield", "player"=>{"name"=>"Michael", "position"=>"Midfield", "number"=>"5", "hometown"=>"Sparta", "team_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Michael"], ["position", "Midfield"], ["number", 5], ["hometown", "Sparta"], ["created_at", "2019-11-07 17:32:04.872821"], ["updated_at", "2019-11-07 17:32:04.872821"], ["team_id", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 13ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 12:32:23 -0500
+Started GET "/teams" for ::1 at 2019-11-07 12:32:23 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mTeam Load (1.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 47ms (Views: 37.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/teams" for ::1 at 2019-11-07 12:32:46 -0500
+Processing by TeamsController#create as JSON
+  Parameters: {"name"=>"MJ's Team", "color"=>"Red", "rank"=>"2", "team"=>{"name"=>"MJ's Team", "color"=>"Red", "rank"=>"2"}}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[36mTeam Create (0.7ms)[0m  [1m[32mINSERT INTO "teams" ("name", "color", "rank", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "MJ's Team"], ["color", "Red"], ["rank", 2], ["created_at", "2019-11-07 17:32:46.068950"], ["updated_at", "2019-11-07 17:32:46.068950"]]
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/teams_controller.rb:14
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:18
+Completed 200 OK in 24ms (Views: 6.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:32:51 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:32:51 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Processing by TeamsController#index as */*
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:33:41 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:33:41 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 19ms (Views: 16.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:33:47 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:33:47 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+Processing by PlayersController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:33:58 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:33:58 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:34:31 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:34:31 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:35:18 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:35:18 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 49ms (Views: 42.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:37:23 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:37:23 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/players_controller.rb:6
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 30ms (Views: 24.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:37:36 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:37:36 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:38:16 -0500
+Started GET "/players" for ::1 at 2019-11-07 12:38:16 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 12:38:48 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"1", "name"=>"Messi", "hometown"=>"Argentina ", "number"=>"10", "position"=>"Forward", "player"=>{"name"=>"Messi", "position"=>"Forward", "number"=>"10", "hometown"=>"Argentina ", "team_id"=>"1"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Messi"], ["position", "Forward"], ["number", 10], ["hometown", "Argentina "], ["created_at", "2019-11-07 17:38:48.791473"], ["updated_at", "2019-11-07 17:38:48.791473"], ["team_id", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 11ms (Views: 1.0ms | ActiveRecord: 1.9ms)
+
+
+  [1m[36mPlayer Load (50.9ms)[0m  [1m[34mSELECT  "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/players" for ::1 at 2019-11-07 12:45:10 -0500
+Started GET "/teams" for ::1 at 2019-11-07 12:45:10 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.4ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 53ms (Views: 47.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:49:27 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:49:39 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 12:57:27 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT  "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-11-07 13:00:31 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:01:14 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:04:33 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 92ms (Views: 85.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:29:31 -0500
+Started GET "/players" for ::1 at 2019-11-07 13:29:31 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 13:30:09 -0500
+Started GET "/teams" for ::1 at 2019-11-07 13:30:09 -0500
+Processing by PlayersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mPlayer Load (4.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+Completed 200 OK in 44ms (Views: 26.7ms | ActiveRecord: 4.0ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 36ms (Views: 31.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:30:21 -0500
+Started GET "/players" for ::1 at 2019-11-07 13:30:21 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:30:33 -0500
+Started GET "/players" for ::1 at 2019-11-07 13:30:33 -0500
+Processing by TeamsController#index as */*
+Processing by PlayersController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 44ms (Views: 37.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 13:30:33 -0500
+Started GET "/teams" for ::1 at 2019-11-07 13:30:33 -0500
+Processing by PlayersController#index as */*
+Processing by TeamsController#index as */*
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:33:26 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 24ms (Views: 19.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 13:33:38 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:39:20 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 24ms (Views: 18.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 13:39:21 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mPlayer Load (13.2ms)[0m  [1m[34mSELECT  "players".* FROM "players" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/teams" for ::1 at 2019-11-07 13:47:50 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 28ms (Views: 22.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:49:54 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 25ms (Views: 18.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:52:33 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:55:26 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 43ms (Views: 35.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 13:59:12 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 63ms (Views: 56.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/players" for ::1 at 2019-11-07 13:59:58 -0500
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:6
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:01:37 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:05:34 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (3.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 47ms (Views: 29.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:05:42 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 14:05:50 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"2", "name"=>"Michael", "hometown"=>"Sparta", "number"=>"5", "position"=>"Forward", "player"=>{"name"=>"Michael", "position"=>"Forward", "number"=>"5", "hometown"=>"Sparta", "team_id"=>"2"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (0.4ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Michael"], ["position", "Forward"], ["number", 5], ["hometown", "Sparta"], ["created_at", "2019-11-07 19:05:50.949432"], ["updated_at", "2019-11-07 19:05:50.949432"], ["team_id", 2]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 21ms (Views: 1.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:06:21 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 14:06:29 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"2", "name"=>"Michael", "hometown"=>"Sparta", "number"=>"5", "position"=>"Forward", "player"=>{"name"=>"Michael", "position"=>"Forward", "number"=>"5", "hometown"=>"Sparta", "team_id"=>"2"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (35.5ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Michael"], ["position", "Forward"], ["number", 5], ["hometown", "Sparta"], ["created_at", "2019-11-07 19:06:29.567805"], ["updated_at", "2019-11-07 19:06:29.567805"], ["team_id", 2]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 47ms (Views: 0.7ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:07:38 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:07:49 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/players" for ::1 at 2019-11-07 14:08:09 -0500
+Processing by PlayersController#create as JSON
+  Parameters: {"team_id"=>"2", "name"=>"DJ", "hometown"=>"Ohio ", "number"=>"00", "position"=>"Mid", "player"=>{"name"=>"DJ", "position"=>"Mid", "number"=>"00", "hometown"=>"Ohio ", "team_id"=>"2"}}
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[36mPlayer Create (31.6ms)[0m  [1m[32mINSERT INTO "players" ("name", "position", "number", "hometown", "created_at", "updated_at", "team_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "DJ"], ["position", "Mid"], ["number", 0], ["hometown", "Ohio "], ["created_at", "2019-11-07 19:08:09.381919"], ["updated_at", "2019-11-07 19:08:09.381919"], ["team_id", 2]]
+  ↳ app/controllers/players_controller.rb:12
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/players_controller.rb:12
+Completed 201 Created in 43ms (Views: 1.4ms | ActiveRecord: 33.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:08:13 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 20ms (Views: 16.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:11:02 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:11:23 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:15:25 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:15:57 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 43ms (Views: 31.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:16:06 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 48ms (Views: 40.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:16:54 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:17:18 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:18:14 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 27ms (Views: 22.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:18:35 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:19:07 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:19:35 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:21:41 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 76ms (Views: 70.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:21:45 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:22:41 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:22:45 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:23:14 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:23:16 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:23:56 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (3.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 34ms (Views: 25.9ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:24:01 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:25:30 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 32ms (Views: 25.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:26:37 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 59ms (Views: 53.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:26:42 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:26:56 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:27:33 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:29:26 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 26ms (Views: 21.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:29:45 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:30:59 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 28ms (Views: 21.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:31:03 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:31:14 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:32:20 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (12.9ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 130ms (Views: 110.3ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:32:23 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:33:35 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 35ms (Views: 27.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:33:40 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:34:22 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 34ms (Views: 28.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:34:27 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:34:48 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:36:11 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:36:22 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:37:51 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:38:25 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:38:29 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:38:39 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:39:29 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:41:45 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:42:04 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:03 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 89ms (Views: 83.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:07 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:15 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:24 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:35 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:38 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:43:38 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:46:46 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:46:52 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/teams" for ::1 at 2019-11-07 14:46:56 -0500
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "players"."id" FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/controllers/teams_controller.rb:9
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.8ms)
+
+
