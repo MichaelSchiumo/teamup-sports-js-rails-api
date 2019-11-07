@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
-  playersContainer.appendChild(generatePlayerForm());
+  // playersContainer.appendChild(generatePlayerForm());
 
   document.querySelector('#create-team').addEventListener("submit", function(e) {
     e.preventDefault();
@@ -35,24 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
     addTeam(teamData);
   })
 
-  document.querySelector('#create-player').addEventListener("submit", function(e) {
-    e.preventDefault();
 
-    let playerData = {
-      name: e.target.elements.name.value,
-      position: e.target.elements.position.value,
-      number: e.target.elements.number.value,
-      hometown: e.target.elements.hometown.value
-    }
-
-    e.target.elements.name.value = '';
-    e.target.elements.position.value = '';
-    e.target.elements.number.value = '';
-    e.target.elements.hometown.value = '';
-
-    savePlayer(playerData)
-    addPlayer(playerData)
-  })
 
 });
 
@@ -135,8 +118,17 @@ function renderPlayers(playersArray) {
     const a = document.createElement("a");
     a.setAttribute('href', '#')
     a.innerHTML = `${team.name}`
-    debugger
+
+    a.addEventListener("click", function(e) {
+      generatePlayerForm()
+    })
+
     h2.appendChild(a)
+
+
+
+
+
     teamsContainer.appendChild(teamWrapper)
     teamWrapper.appendChild(h2)
 

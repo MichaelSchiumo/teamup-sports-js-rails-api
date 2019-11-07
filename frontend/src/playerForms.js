@@ -1,5 +1,7 @@
-const generatePlayerForm = () => {
+let formPlacement = document.querySelector('div.form-placement')
 
+const generatePlayerForm = () => {
+  debugger
   const form = document.createElement('form')
 
   const formSubmit = document.createElement('button')
@@ -30,7 +32,32 @@ const generatePlayerForm = () => {
 
   form.appendChild(formSubmit)
 
-  return form
+  formPlacement.appendChild(form)
+
+  document.querySelector('#create-player').addEventListener("submit", handleFormSubmission)
+
+  //append based on the ID of the DIV
+  //each team should be wrapped in divs with their respective ID's
+  //pass in team ID to query for each specific div
+
+}
+
+function handleFormSubmission(e) {
+  e.preventDefault();
+  let playerData = {
+    name: e.target.elements.name.value,
+    position: e.target.elements.position.value,
+    number: e.target.elements.number.value,
+    hometown: e.target.elements.hometown.value
+  }
+
+  e.target.elements.name.value = '';
+  e.target.elements.position.value = '';
+  e.target.elements.number.value = '';
+  e.target.elements.hometown.value = '';
+
+  savePlayer(playerData)
+  addPlayer(playerData)
 }
 
 function addPlayer(player) {
