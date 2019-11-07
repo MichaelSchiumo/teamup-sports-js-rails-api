@@ -27,15 +27,13 @@ function fetchTeams() {
 
   function addTeam(team) {
 
-    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
     const a = document.createElement("a");
     a.setAttribute('href', '#')
     a.innerHTML = `${team.name}`
 
     a.addEventListener("click", function(e) {
       teamsContainer.textContent = "";
-
-
 
       let teamFilter = allTeams.filter(function(team) {
         return e.target.innerText.toLowerCase() === team.name.toLowerCase()
@@ -45,26 +43,26 @@ function fetchTeams() {
         generatePlayerForm(team)
         // h2.appendChild(team.name)
         // teamsContainer.textContent = team.name
-        h2.textContent = team.name
+        h3.textContent = team.name
         teamsContainer.appendChild(h2)
 
         listPlayers(team);
       })
     })
 
-    h2.appendChild(a)
+    h3.appendChild(a)
 
 
     teamsContainer.appendChild(teamWrapper)
-    teamWrapper.appendChild(h2)
+    teamWrapper.appendChild(h3)
 
-    const teamColorEl = document.createElement("h4")
+    const teamColorEl = document.createElement("ul")
     teamColorEl.innerHTML = `Color: ${team.color}`
-    h2.appendChild(teamColorEl)
+    h3.appendChild(teamColorEl)
 
-    const teamRank = document.createElement("h4")
+    const teamRank = document.createElement("ul")
     teamRank.innerHTML = `Rank: ${team.rank}`
-    h2.appendChild(teamRank)
+    h3.appendChild(teamRank)
 
   }
 

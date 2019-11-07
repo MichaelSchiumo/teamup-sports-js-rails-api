@@ -42,6 +42,8 @@ const generatePlayerForm = (team) => {
   label.appendChild(document.createTextNode('Team Captain'));
   form.appendChild(label)
 
+
+
   form.appendChild(formSubmit)
 
   formPlacement.appendChild(form)
@@ -63,7 +65,8 @@ function handleFormSubmission(e) {
     name: e.target.elements.name.value,
     position: e.target.elements.position.value,
     number: e.target.elements.number.value,
-    hometown: e.target.elements.hometown.value
+    hometown: e.target.elements.hometown.value,
+    captain: e.target.elements.captain.value
   }
 
   savePlayer(playerData)
@@ -78,21 +81,21 @@ function handleFormSubmission(e) {
 
 function addPlayer(player) {
 
-  const h2 = document.createElement("h2")
-  h2.innerHTML = `Name: ${player.name}`
+  const h3 = document.createElement("h3")
+  h3.innerHTML = `${player.name}`.charAt(0).toUpperCase() + `${player.name}`.slice(1)
   playersContainer.appendChild(playerWrapper)
-  playerWrapper.appendChild(h2)
+  playerWrapper.appendChild(h3)
 
-  const playerPositionEl = document.createElement("h4")
-  playerPositionEl.innerHTML = `Position: ${player.position}`
-  h2.appendChild(playerPositionEl)
+  const playerPositionEl = document.createElement("ul")
+  playerPositionEl.innerHTML = "Position: " + `${player.position}`.charAt(0).toUpperCase() + `${player.position}`.slice(1)
+  h3.appendChild(playerPositionEl)
 
-  const playerNumberEl = document.createElement("h4")
+  const playerNumberEl = document.createElement("ul")
   playerNumberEl.innerHTML = `Jersey Number: ${player.number}`
-  h2.appendChild(playerNumberEl)
+  h3.appendChild(playerNumberEl)
 
-  const playerHometownEl = document.createElement("h4")
-  playerHometownEl.innerHTML = `Hometown: ${player.hometown}`
-  h2.appendChild(playerHometownEl)
+  const playerHometownEl = document.createElement("ul")
+  playerHometownEl.innerHTML = "Hometown: " + `${player.hometown}`.charAt(0).toUpperCase() + `${player.hometown}`.slice(1)
+  h3.appendChild(playerHometownEl)
 
 }
