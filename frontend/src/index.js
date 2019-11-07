@@ -35,19 +35,17 @@ document.addEventListener("DOMContentLoaded", function() {
     addTeam(teamData);
   })
 
-
-
 });
 
 
-function fetchTeams() {
-  return fetch(TEAMS_URL)
-      .then(response => response.json())
-      .then(json => {
-        renderTeams(json.data)
-        //here is where we fetch players
-      })
-  };
+// function fetchTeams() {
+//   return fetch(TEAMS_URL)
+//       .then(response => response.json())
+//       .then(json => {
+//         renderTeams(json.data)
+//         //here is where we fetch players
+//       })
+//   };
 
 function fetchPlayerAdd(id) {
   let data = {team_id: id};
@@ -94,16 +92,16 @@ function fetchPlayerAdd(id) {
 // }
 
 
-function renderTeams(teamsArray) {
-  // let teamWrapper = document.createElement("div")
-  // teamWrapper.id = 'team-wrapper'
-  console.log(teamsArray)
-  teamsArray.forEach(team => {
-    let newTeam = new Team(team.attributes)
-    addTeam(newTeam)
-
-  })
-}
+// function renderTeams(teamsArray) {
+//   // let teamWrapper = document.createElement("div")
+//   // teamWrapper.id = 'team-wrapper'
+//   console.log(teamsArray)
+//   teamsArray.forEach(team => {
+//     let newTeam = new Team(team.attributes)
+//     addTeam(newTeam)
+//
+//   })
+// }
 
 function renderPlayers(playersArray) {
   playersArray.forEach(player => {
@@ -112,35 +110,35 @@ function renderPlayers(playersArray) {
   })
 }
 
-  function addTeam(team) {
-
-    const h2 = document.createElement("h2");
-    const a = document.createElement("a");
-    a.setAttribute('href', '#')
-    a.innerHTML = `${team.name}`
-
-    a.addEventListener("click", function(e) {
-      generatePlayerForm()
-    })
-
-    h2.appendChild(a)
-
-
-
-
-
-    teamsContainer.appendChild(teamWrapper)
-    teamWrapper.appendChild(h2)
-
-    const teamColorEl = document.createElement("h4")
-    teamColorEl.innerHTML = `Color: ${team.color}`
-    h2.appendChild(teamColorEl)
-
-    const teamRank = document.createElement("h4")
-    teamRank.innerHTML = `Rank: ${team.rank}`
-    h2.appendChild(teamRank)
-
-  }
+  // function addTeam(team) {
+  //
+  //   const h2 = document.createElement("h2");
+  //   const a = document.createElement("a");
+  //   a.setAttribute('href', '#')
+  //   a.innerHTML = `${team.name}`
+  //
+  //   a.addEventListener("click", function(e) {
+  //     generatePlayerForm()
+  //   })
+  //
+  //   h2.appendChild(a)
+  //
+  //
+  //
+  //
+  //
+  //   teamsContainer.appendChild(teamWrapper)
+  //   teamWrapper.appendChild(h2)
+  //
+  //   const teamColorEl = document.createElement("h4")
+  //   teamColorEl.innerHTML = `Color: ${team.color}`
+  //   h2.appendChild(teamColorEl)
+  //
+  //   const teamRank = document.createElement("h4")
+  //   teamRank.innerHTML = `Rank: ${team.rank}`
+  //   h2.appendChild(teamRank)
+  //
+  // }
 
 function addPlayer(player) {
   const h2 = document.createElement("h2")
