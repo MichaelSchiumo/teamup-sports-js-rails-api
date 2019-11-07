@@ -35,6 +35,8 @@ function fetchTeams() {
 
     a.addEventListener("click", function(e) {
       teamsContainer.textContent = "";
+      
+
 
       let teamFilter = allTeams.filter(function(team) {
         return e.target.innerText.toLowerCase() === team.name.toLowerCase()

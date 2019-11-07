@@ -19,6 +19,7 @@ let homeButton = document.querySelector('#home')
   })
 
 function pageLoad() {
+  console.log("problem10000000")
   teamsContainer.textContent = ''
   playersContainer.textContent = ''
   playerWrapper.textContent = ''

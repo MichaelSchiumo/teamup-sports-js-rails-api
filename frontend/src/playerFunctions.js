@@ -52,6 +52,7 @@ function fetchPlayers(team_id) {
 }
 
 function listPlayers(team) {
+  playerWrapper.textContent = '';
   team.players.forEach(player => {
     //generate HTML
     addPlayer(player)

@@ -1,6 +1,7 @@
 let formPlacement = document.querySelector('div.form-placement')
 
 const generatePlayerForm = (team) => {
+  formPlacement.textContent = '';
   const form = document.createElement('form')
   form.setAttribute('data-id', team.id)
   const formSubmit = document.createElement('button')
@@ -32,6 +33,7 @@ const generatePlayerForm = (team) => {
   form.appendChild(formSubmit)
 
   formPlacement.appendChild(form)
+  playersContainer.appendChild(formPlacement)
 
   document.querySelector('#create-player').addEventListener("submit", handleFormSubmission)
 
@@ -63,7 +65,7 @@ function handleFormSubmission(e) {
 }
 
 function addPlayer(player) {
-  
+
   const h2 = document.createElement("h2")
   h2.innerHTML = `Name: ${player.name}`
   playersContainer.appendChild(playerWrapper)
