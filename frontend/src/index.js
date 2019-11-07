@@ -10,11 +10,29 @@ let playerWrapper = document.createElement("div")
 playerWrapper.id = 'player-wrapper'
 teamWrapper.id = 'team-wrapper'
 
-document.addEventListener("DOMContentLoaded", function() {
+let homeButton = document.querySelector('#home')
+
+  homeButton.addEventListener("click", function() {
+    console.log("click")
+    teamsContainer.textContent = ''
+    pageLoad()
+  })
+
+function pageLoad() {
+  teamsContainer.textContent = ''
+  playersContainer.textContent = ''
+  playerWrapper.textContent = ''
+  teamWrapper.textContent = '';
+  // formPlacement.remove();
+
+  // document.addEventListener("DOMContentLoaded", function() {
+    console.log("checking")
   generateTeamForm();
   fetchTeams();
-  fetchPlayers();
+  // fetchPlayers();
   teamsContainer.appendChild(generateTeamForm());
+
+  // playerWrapper.innerHTML = '';
   // playersContainer.appendChild(generatePlayerForm());
 
   document.querySelector('#create-team').addEventListener("submit", function(e) {
@@ -36,9 +54,9 @@ document.addEventListener("DOMContentLoaded", function() {
     addTeam(teamData);
   })
 
-});
+};
 
-
+pageLoad()
 
 
   // function fetchPokemonAdd(id) {

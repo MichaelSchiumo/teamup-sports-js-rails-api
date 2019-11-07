@@ -53,6 +53,7 @@ function handleFormSubmission(e) {
   }
 
   savePlayer(playerData)
+
   e.target.elements.name.value = '';
   e.target.elements.position.value = '';
   e.target.elements.number.value = '';
@@ -62,6 +63,7 @@ function handleFormSubmission(e) {
 }
 
 function addPlayer(player) {
+  
   const h2 = document.createElement("h2")
   h2.innerHTML = `Name: ${player.name}`
   playersContainer.appendChild(playerWrapper)

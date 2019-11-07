@@ -5,6 +5,7 @@ class Team {
     this.name = team.name;
     this.color = team.color;
     this.rank = team.rank;
+    this.players = [];
     allTeams.push(this)
   }
 

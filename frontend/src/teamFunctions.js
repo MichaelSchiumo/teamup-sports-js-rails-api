@@ -5,14 +5,23 @@ function fetchTeams() {
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
-        renderTeams(json.data)
+        renderTeams(json)
         //here is where we fetch players
       })
   };
 
-  function renderTeams(teamsArray) {
-    teamsArray.forEach(team => {
+  function renderTeams(json) {
+
+    json.data.forEach(team => {
       let newTeam = new Team(team.attributes)
+
+      let players = json.included.filter(player => {
+        return player.attributes.team_id === newTeam.id
+      })
+
+      createPlayers(newTeam, players)
+
+      console.log(team.attributes)
       addTeam(newTeam)
     })
   }
@@ -37,9 +46,9 @@ function fetchTeams() {
         // teamsContainer.textContent = team.name
         h2.textContent = team.name
         teamsContainer.appendChild(h2)
+
+        listPlayers(team);
       })
-
-
     })
 
     h2.appendChild(a)

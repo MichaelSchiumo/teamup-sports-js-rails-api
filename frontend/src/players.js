@@ -10,11 +10,4 @@ class Player {
     allPlayers.push(this)
   }
 
-//
-// static buildPlayerObjects(players) {
-//   return players.map((player) => {
-//     return new Player(player.id, player.name, player.position, player.number, player.captain, player.hometown)
-//   })
-// }
-
 }
