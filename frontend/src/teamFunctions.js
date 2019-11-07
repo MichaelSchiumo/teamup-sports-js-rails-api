@@ -20,14 +20,14 @@ function fetchTeams() {
 
       createPlayers(newTeam, players)
 
-      console.log(team.attributes)
       addTeam(newTeam)
     })
   }
 
   function addTeam(team) {
 
-    const h3 = document.createElement("h3");
+    const h2 = document.createElement("h2");
+    const h4 = document.createElement("h4")
     const a = document.createElement("a");
     a.setAttribute('href', '#')
     a.innerHTML = `${team.name}`
@@ -43,26 +43,28 @@ function fetchTeams() {
         generatePlayerForm(team)
         // h2.appendChild(team.name)
         // teamsContainer.textContent = team.name
-        h3.textContent = team.name
+        h2.textContent = team.name
+        h4.textContent = "Roster"
         teamsContainer.appendChild(h2)
+        teamsContainer.appendChild(h4)
 
         listPlayers(team);
       })
     })
 
-    h3.appendChild(a)
+    h2.appendChild(a)
 
 
     teamsContainer.appendChild(teamWrapper)
-    teamWrapper.appendChild(h3)
+    teamWrapper.appendChild(h2)
 
     const teamColorEl = document.createElement("ul")
     teamColorEl.innerHTML = `Color: ${team.color}`
-    h3.appendChild(teamColorEl)
+    h2.appendChild(teamColorEl)
 
     const teamRank = document.createElement("ul")
     teamRank.innerHTML = `Rank: ${team.rank}`
-    h3.appendChild(teamRank)
+    h2.appendChild(teamRank)
 
   }
 
