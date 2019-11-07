@@ -3,13 +3,14 @@ class PlayersController < ApplicationController
 
   def index
     players = Player.all
-    render json: PlayerSerializer.new(players)
+    render json: PlayerSerializer.new(players), include: [:team]
   end
 
   def create
-    @player = @team.player.build(player_params)
+    binding.pry
+    player = Player.new(player_params)
 
-    if @player.save
+    if player.save
       json_response(player, :created)
     else
       render json: { message: 'Player was not created.' }
@@ -18,7 +19,7 @@ class PlayersController < ApplicationController
 
   def show
     player = Player.find_by(id: params[:id])
-    render json: PlayerSerializer.new(player)
+    render json: PlayerSerializer.new(player), include: [:team]
   end
 
   def update
