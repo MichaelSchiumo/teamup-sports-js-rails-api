@@ -7,7 +7,7 @@ class PlayersController < ApplicationController
   end
 
   def create
-    @player = team.player.build(player_params)
+    @player = @team.player.build(player_params)
 
     if @player.save
       json_response(player, :created)

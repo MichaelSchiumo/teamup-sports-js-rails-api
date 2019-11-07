@@ -11,7 +11,7 @@ class TeamsController < ApplicationController
 
   def create
 
-    team = Team.new(team_params)
+    team = Team.create!(team_params)
     options = {
       include: [:players]
     }
