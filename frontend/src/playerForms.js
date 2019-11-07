@@ -30,6 +30,18 @@ const generatePlayerForm = (team) => {
   hometownInput.placeholder = "Player's Hometown"
   form.appendChild(hometownInput)
 
+  let captainCheck = document.createElement('input')
+  captainCheck.type = "checkbox"
+  captainCheck.name = "captain"
+  captainCheck.setAttribute('name', 'captain')
+  captainCheck.id = "captainCheck.id"
+  form.appendChild(captainCheck)
+
+  let label = document.createElement('label')
+  label.htmlFor = "captainCheck.id";
+  label.appendChild(document.createTextNode('Team Captain'));
+  form.appendChild(label)
+
   form.appendChild(formSubmit)
 
   formPlacement.appendChild(form)
@@ -80,7 +92,7 @@ function addPlayer(player) {
   h2.appendChild(playerNumberEl)
 
   const playerHometownEl = document.createElement("h4")
-  playerHometownEl.innerHTML = `${player.hometown}`
+  playerHometownEl.innerHTML = `Hometown: ${player.hometown}`
   h2.appendChild(playerHometownEl)
 
 }

@@ -6,7 +6,6 @@ function fetchTeams() {
       .then(response => response.json())
       .then(json => {
         renderTeams(json)
-        //here is where we fetch players
       })
   };
 
@@ -35,7 +34,7 @@ function fetchTeams() {
 
     a.addEventListener("click", function(e) {
       teamsContainer.textContent = "";
-      
+
 
 
       let teamFilter = allTeams.filter(function(team) {

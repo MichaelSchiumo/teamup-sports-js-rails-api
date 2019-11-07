@@ -13,13 +13,12 @@ teamWrapper.id = 'team-wrapper'
 let homeButton = document.querySelector('#home')
 
   homeButton.addEventListener("click", function() {
-    console.log("click")
+
     teamsContainer.textContent = ''
     pageLoad()
   })
 
 function pageLoad() {
-  console.log("problem10000000")
   teamsContainer.textContent = ''
   playersContainer.textContent = ''
   playerWrapper.textContent = ''
@@ -27,7 +26,6 @@ function pageLoad() {
   // formPlacement.remove();
 
   // document.addEventListener("DOMContentLoaded", function() {
-    console.log("checking")
   generateTeamForm();
   fetchTeams();
   // fetchPlayers();
@@ -58,89 +56,3 @@ function pageLoad() {
 };
 
 pageLoad()
-
-
-  // function fetchPokemonAdd(id) {
-  //   let data = { trainer_id: id };
-  //   let configObj = {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json"
-  //     },
-  //     body: JSON.stringify(data)
-  //   };
-  //   return fetch("http://localhost:3000/pokemons", configObj)
-  //     .then(response => response.json())
-  //     .then(object => {
-  //       console.log(object);
-  //       renderPokemons([object]);
-  //     });
-  // }
-
-
-
-
-// function renderTeams(teamsArray) {
-//   // let teamWrapper = document.createElement("div")
-//   // teamWrapper.id = 'team-wrapper'
-//   console.log(teamsArray)
-//   teamsArray.forEach(team => {
-//     let newTeam = new Team(team.attributes)
-//     addTeam(newTeam)
-//
-//   })
-// }
-
-
-
-// function addPlayer(player) {
-//   const h2 = document.createElement("h2")
-//   h2.innerHTML = `Name: ${player.name}`
-//   playersContainer.appendChild(playerWrapper)
-//   playerWrapper.appendChild(h2)
-//
-//   const playerPositionEl = document.createElement("h4")
-//   playerPositionEl.innerHTML = `Position: ${player.position}`
-//   h2.appendChild(playerPositionEl)
-//
-//   const playerNumberEl = document.createElement("h4")
-//   playerNumberEl.innerHTML = `Jersey Number: ${player.number}`
-//   h2.appendChild(playerNumberEl)
-//
-//   const playerHometownEl = document.createElement("h4")
-//   playerHometownEl.innerHTML = `${player.hometown}`
-//   h2.appendChild(playerHometownEl)
-//
-// }
-
-
-//what do we do after saveTeam?
-
-// function saveTeam(team) {
-//   // debugger
-//     return (
-//         fetch(TEAMS_URL, {
-//           method: "POST",
-//           headers: {
-//             "Content-Type": "application/json",
-//             "Accept": "application/json"
-//           },
-//           body: JSON.stringify(team)
-//         })
-//     )
-//
-// }
-
-// function savePlayer(player) {
-//   return (
-//     fetch(PlAYERS_URL, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         "Accept": "application/json"
-//       },
-//       body: JSON.stringify(player)
-//     })
-//   )
-// }
