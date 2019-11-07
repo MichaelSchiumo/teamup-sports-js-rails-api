@@ -1,4 +1,4 @@
-class Players {
+class Player {
   constructor(player) {
     this.id = id;
     this.name = name;

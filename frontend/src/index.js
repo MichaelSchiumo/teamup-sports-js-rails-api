@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function() {
   generateTeamForm();
   fetchTeams();
   teamsContainer.appendChild(generateTeamForm());
-  fetchPlayers();
   playersContainer.appendChild(generatePlayerForm());
 
   document.querySelector('#create-team').addEventListener("submit", function(e) {
@@ -59,7 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function fetchTeams() {
-  console.log("why?")
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
@@ -68,13 +66,49 @@ function fetchTeams() {
       })
   };
 
-function fetchPlayers() {
-    return fetch(PlAYERS_URL)
-      .then(response => response.json())
-      .then(json => {
-        renderPlayers(json.data)
-      })
+function fetchPlayerAdd(id) {
+  let data = {team_id: id};
+  let configObj = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: JSON.stringify(data)
+  };
+  return fetch(PlAYERS_URL, configObj)
+  .then(response => response.json())
+  .then(object => {
+    console.log(object);
+    renderPlayers([object])
+  })
 }
+
+  // function fetchPokemonAdd(id) {
+  //   let data = { trainer_id: id };
+  //   let configObj = {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json"
+  //     },
+  //     body: JSON.stringify(data)
+  //   };
+  //   return fetch("http://localhost:3000/pokemons", configObj)
+  //     .then(response => response.json())
+  //     .then(object => {
+  //       console.log(object);
+  //       renderPokemons([object]);
+  //     });
+  // }
+
+// function fetchPlayers() {
+//     return fetch(PlAYERS_URL)
+//       .then(response => response.json())
+//       .then(json => {
+//         renderPlayers(json.data)
+//       })
+// }
 
 
 function renderTeams(teamsArray) {
@@ -98,7 +132,11 @@ function renderPlayers(playersArray) {
   function addTeam(team) {
 
     const h2 = document.createElement("h2");
-    h2.innerHTML = `${team.name}`
+    const a = document.createElement("a");
+    a.setAttribute('href', '#')
+    a.innerHTML = `${team.name}`
+    debugger
+    h2.appendChild(a)
     teamsContainer.appendChild(teamWrapper)
     teamWrapper.appendChild(h2)
 
@@ -137,7 +175,7 @@ function addPlayer(player) {
 
 function saveTeam(team) {
   // debugger
-    //return (
+    return (
         fetch(TEAMS_URL, {
           method: "POST",
           headers: {
@@ -147,12 +185,13 @@ function saveTeam(team) {
           body: JSON.stringify(team)
         })
       // )
-      .then(response => {
-        response.json()})
-      .then(
-        json =>
-          console.log(team))
-      .catch(error => console.log(error))    
+      // .then(response => {
+      //   response.json()})
+      // .then(
+      //   json =>
+      //     console.log(team))
+      // .catch(error => console.log(error))
+    )
 
 }
 
@@ -170,68 +209,68 @@ function savePlayer(player) {
 }
 
 
-const generateTeamForm = () => {
-  //use css
-    const form = document.createElement('form')
-    // const formInput = document.createElement('input')
-    const formSubmit = document.createElement('button')
-    formSubmit.textContent = "Create Team"
-    //write loop to create multiple inputs
-    //append inputs to form
-    form.id = "create-team"
-    formSubmit.id = "form-submit"
+// const generateTeamForm = () => {
+//   //use css
+//     const form = document.createElement('form')
+//     // const formInput = document.createElement('input')
+//     const formSubmit = document.createElement('button')
+//     formSubmit.textContent = "Create Team"
+//     //write loop to create multiple inputs
+//     //append inputs to form
+//     form.id = "create-team"
+//     formSubmit.id = "form-submit"
+//
+//     let nameInput = document.createElement("input")
+//     nameInput.setAttribute('name', 'name')
+//     nameInput.placeholder = "Team Name"
+//     form.appendChild(nameInput)
+//
+//     let colorInput = document.createElement("input")
+//     colorInput.setAttribute('name', 'color')
+//     colorInput.placeholder = "Team Color"
+//     form.appendChild(colorInput)
+//
+//     let rankInput = document.createElement("input")
+//     rankInput.setAttribute('name', 'rank')
+//     rankInput.placeholder = "Team Rank"
+//     form.appendChild(rankInput)
+//
+//     form.appendChild(formSubmit)
+//
+//     return form
+// }
 
-    let nameInput = document.createElement("input")
-    nameInput.setAttribute('name', 'name')
-    nameInput.placeholder = "Team Name"
-    form.appendChild(nameInput)
-
-    let colorInput = document.createElement("input")
-    colorInput.setAttribute('name', 'color')
-    colorInput.placeholder = "Team Color"
-    form.appendChild(colorInput)
-
-    let rankInput = document.createElement("input")
-    rankInput.setAttribute('name', 'rank')
-    rankInput.placeholder = "Team Rank"
-    form.appendChild(rankInput)
-
-    form.appendChild(formSubmit)
-
-    return form
-}
-
-const generatePlayerForm = () => {
-
-  const form = document.createElement('form')
-
-  const formSubmit = document.createElement('button')
-  formSubmit.textContent = "Create Player"
-
-  form.id = 'create-player'
-  formSubmit.id = 'form-submit'
-
-  let nameInput = document.createElement('input')
-  nameInput.setAttribute('name', 'name')
-  nameInput.placeholder = "Player Name"
-  form.appendChild(nameInput)
-
-  let positionInput = document.createElement('input')
-  positionInput.setAttribute('name', 'position')
-  positionInput.placeholder = "Player Position"
-  form.appendChild(positionInput)
-
-  let jerseyNumberInput = document.createElement('input')
-  jerseyNumberInput.setAttribute('name', 'number')
-  jerseyNumberInput.placeholder = "Jersey Number"
-  form.appendChild(jerseyNumberInput)
-
-  let hometownInput = document.createElement('input')
-  hometownInput.setAttribute('name', 'hometown')
-  hometownInput.placeholder = "Player's Hometown"
-  form.appendChild(hometownInput)
-
-  form.appendChild(formSubmit)
-
-  return form
-}
+// const generatePlayerForm = () => {
+//
+//   const form = document.createElement('form')
+//
+//   const formSubmit = document.createElement('button')
+//   formSubmit.textContent = "Create Player"
+//
+//   form.id = 'create-player'
+//   formSubmit.id = 'form-submit'
+//
+//   let nameInput = document.createElement('input')
+//   nameInput.setAttribute('name', 'name')
+//   nameInput.placeholder = "Player Name"
+//   form.appendChild(nameInput)
+//
+//   let positionInput = document.createElement('input')
+//   positionInput.setAttribute('name', 'position')
+//   positionInput.placeholder = "Player Position"
+//   form.appendChild(positionInput)
+//
+//   let jerseyNumberInput = document.createElement('input')
+//   jerseyNumberInput.setAttribute('name', 'number')
+//   jerseyNumberInput.placeholder = "Jersey Number"
+//   form.appendChild(jerseyNumberInput)
+//
+//   let hometownInput = document.createElement('input')
+//   hometownInput.setAttribute('name', 'hometown')
+//   hometownInput.placeholder = "Player's Hometown"
+//   form.appendChild(hometownInput)
+//
+//   form.appendChild(formSubmit)
+//
+//   return form
+// }
