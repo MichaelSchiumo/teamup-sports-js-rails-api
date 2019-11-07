@@ -30,17 +30,17 @@ const generatePlayerForm = (team) => {
   hometownInput.placeholder = "Player's Hometown"
   form.appendChild(hometownInput)
 
-  let captainCheck = document.createElement('input')
-  captainCheck.type = "checkbox"
-  captainCheck.name = "captain"
-  captainCheck.setAttribute('name', 'captain')
-  captainCheck.id = "captainCheck.id"
-  form.appendChild(captainCheck)
-
-  let label = document.createElement('label')
-  label.htmlFor = "captainCheck.id";
-  label.appendChild(document.createTextNode('Team Captain'));
-  form.appendChild(label)
+  // let captainCheck = document.createElement('input')
+  // captainCheck.type = "checkbox"
+  // captainCheck.name = "captain"
+  // captainCheck.setAttribute('name', 'captain')
+  // captainCheck.id = "captainCheck.id"
+  // form.appendChild(captainCheck)
+  //
+  // let label = document.createElement('label')
+  // label.htmlFor = "captainCheck.id";
+  // label.appendChild(document.createTextNode('Team Captain'));
+  // form.appendChild(label)
 
 
 
@@ -82,7 +82,7 @@ function handleFormSubmission(e) {
 function addPlayer(player) {
 
   const h3 = document.createElement("h3")
-  h3.innerHTML = `${player.name}`.charAt(0).toUpperCase() + `${player.name}`.slice(1)
+  h3.innerHTML = `${player.name}`.charAt(0).toUpperCase() + `${player.name}`.slice(1) + ` #${player.number}`
   playersContainer.appendChild(playerWrapper)
   playerWrapper.appendChild(h3)
 
@@ -90,9 +90,9 @@ function addPlayer(player) {
   playerPositionEl.innerHTML = "Position: " + `${player.position}`.charAt(0).toUpperCase() + `${player.position}`.slice(1)
   h3.appendChild(playerPositionEl)
 
-  const playerNumberEl = document.createElement("ul")
-  playerNumberEl.innerHTML = `Jersey Number: ${player.number}`
-  h3.appendChild(playerNumberEl)
+  // const playerNumberEl = document.createElement("ul")
+  // playerNumberEl.innerHTML = `Jersey Number: ${player.number}`
+  // h3.appendChild(playerNumberEl)
 
   const playerHometownEl = document.createElement("ul")
   playerHometownEl.innerHTML = "Hometown: " + `${player.hometown}`.charAt(0).toUpperCase() + `${player.hometown}`.slice(1)

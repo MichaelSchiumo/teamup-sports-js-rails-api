@@ -1,15 +1,16 @@
 body {
     font-family: 'Muli', sans-serif;
+    background-image: url("http://7desktopthemes.com/images/gradient-black-background-wallpaper-4.jpg")
 }
 
 h2, h4, p, span.text {
-    color: rgb(68, 55, 45);
+    color: #ffffff;
     font-family: 'Muli', sans-serif;
     text-align: center;
  }
 
  h3 {
-    color: rgb(98, 129, 133)
+    color:  #ffffff;
  }
 
 header {
@@ -22,8 +23,13 @@ form {
   margin: 2em;
 }
 
+a {
+  color:  #ffffff;
+  text-align: center;
+}
+
 h1 {
-    color: rgb(98, 129, 133);
+    color: #ffffff;;
     font-family: 'Muli', sans-serif;
     font-size: 40px;
     text-align: center;
@@ -92,4 +98,19 @@ input.text-input {
     display: table;
     margin: 1em;
     width: 40%;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+}
+
+ul {
+  color:  #ffffff;
 }
