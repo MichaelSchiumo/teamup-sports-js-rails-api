@@ -1,9 +1,8 @@
 let formPlacement = document.querySelector('div.form-placement')
 
-const generatePlayerForm = () => {
-  debugger
+const generatePlayerForm = (team) => {
   const form = document.createElement('form')
-
+  form.setAttribute('data-id', team.id)
   const formSubmit = document.createElement('button')
   formSubmit.textContent = "Create Player"
 
@@ -39,24 +38,26 @@ const generatePlayerForm = () => {
   //append based on the ID of the DIV
   //each team should be wrapped in divs with their respective ID's
   //pass in team ID to query for each specific div
+  //how do I hide the form on the second click?
 
 }
 
 function handleFormSubmission(e) {
   e.preventDefault();
   let playerData = {
+    team_id: e.target.dataset.id,
     name: e.target.elements.name.value,
     position: e.target.elements.position.value,
     number: e.target.elements.number.value,
     hometown: e.target.elements.hometown.value
   }
 
+  savePlayer(playerData)
   e.target.elements.name.value = '';
   e.target.elements.position.value = '';
   e.target.elements.number.value = '';
   e.target.elements.hometown.value = '';
 
-  savePlayer(playerData)
   addPlayer(playerData)
 }
 
