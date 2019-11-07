@@ -10,11 +10,15 @@ class TeamsController < ApplicationController
   end
 
   def create
-    team = Team.create!(team_params)
+
+    team = Team.new(team_params)
     options = {
       include: [:players]
     }
-    json_response(team, :created)
+    render json: TeamSerializer.new(team)
+
+    # json_response(team, :created)
+
   end
 
   def show

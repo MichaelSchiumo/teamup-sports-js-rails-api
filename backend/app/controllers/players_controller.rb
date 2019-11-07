@@ -7,9 +7,9 @@ class PlayersController < ApplicationController
   end
 
   def create
-    player = team.player.build(player_params)
+    @player = team.player.build(player_params)
 
-    if meal.save
+    if @player.save
       json_response(player, :created)
     else
       render json: { message: 'Player was not created.' }
@@ -37,6 +37,6 @@ class PlayersController < ApplicationController
   end
 
   def set_player
-    player = Player.find(params[:id])
+    player = Player.find_by(id: params[:id])
   end
 end

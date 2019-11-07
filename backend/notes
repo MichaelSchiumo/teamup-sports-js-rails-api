@@ -1,28 +1,84 @@
-53
-
->> u = User.create :userid => "myuserid", :password => "mypasswd", :user_first_name => "test", :user_last_name => "testovich", :user_status => "mystatus", :user_type => "mytype"
-
-bird_b = Bird.create(name: "Grackle", species: "Quiscalus Quiscula")
-
 
 Errors
 
-1. Cannot create player in console, returns false and rolls back
-
-2. Do I need nested resources??
 
 3. In Players controller, can I use include in the index/show actions
-
-4. Do the serializers need to inherit from active model serializer?
-
-5. What do we need to put in the to_json serializer method
-
-6. how does Fast JSON affect our data?
-  -it is included in both of my serializers
-
 
 7. Rails as an API lab
   - set up relationships
   - set up options hash
     -defined in controller
       -after fetch to index, we will receive all of the teams and all of the relationships
+
+
+//use IDs for index.html divs
+
+
+function generateForm() {
+  let form =  document.createElement('form')
+  let nameInput = document.createElement('input')
+  nameInput.setAttribute('name', 'name')
+  //   <input name='name' value=''/>
+}
+
+//put debugger in generateForm to check each attribute
+//div would live in a container on index.html
+//do individual forms in multiple divs
+  //abstract so that each link that is clicked displays a div (the generic div)
+
+
+// sample form
+<form>
+  <label></label>
+  <input name='' value=''/>
+  <input type='submit' value='Submit' />
+</form>
+
+
+for players, create 5 input tags
+
+
+//html visibility (create event listener to toggle true and false of form)
+//default would be false for click event, you want to change HTML visibility to whatever it is not
+
+
+
+-Add options hash to controller actions
+
+
+
+
+
+
+
+//after create team form, wrap data in its own data so that we can clear it out (set innerHtml to '')
+
+
+
+
+
+
+
+
+
+
+
+//for show purposes
+
+-write function renderTeamShow
+  -take team wrapper and clear it
+    -write click event for each team name
+     -when you click on a team name, fires team show page
+      -pass in event with an ID to find a specific team
+        -filter through array of all teams and return a specific object
+          -call addTeam, pass team object in
+
+-parent function
+  -takes in JSON array, filters
+    -
+
+
+-click on team
+  -clear div
+    -create div
+      -fill new div with players
