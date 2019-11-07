@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 function fetchTeams() {
+  console.log("why?")
   return fetch(TEAMS_URL)
       .then(response => response.json())
       .then(json => {
@@ -68,7 +69,6 @@ function fetchTeams() {
   };
 
 function fetchPlayers() {
-    console.log("test")
     return fetch(PlAYERS_URL)
       .then(response => response.json())
       .then(json => {
@@ -80,6 +80,7 @@ function fetchPlayers() {
 function renderTeams(teamsArray) {
   // let teamWrapper = document.createElement("div")
   // teamWrapper.id = 'team-wrapper'
+  console.log(teamsArray)
   teamsArray.forEach(team => {
     let newTeam = new Team(team.attributes)
     addTeam(newTeam)
@@ -113,9 +114,21 @@ function renderPlayers(playersArray) {
 
 function addPlayer(player) {
   const h2 = document.createElement("h2")
-  h2.innerHTML = `${player.name}`
+  h2.innerHTML = `Name: ${player.name}`
   playersContainer.appendChild(playerWrapper)
   playerWrapper.appendChild(h2)
+
+  const playerPositionEl = document.createElement("h4")
+  playerPositionEl.innerHTML = `Position: ${player.position}`
+  h2.appendChild(playerPositionEl)
+
+  const playerNumberEl = document.createElement("h4")
+  playerNumberEl.innerHTML = `Jersey Number: ${player.number}`
+  h2.appendChild(playerNumberEl)
+
+  const playerHometownEl = document.createElement("h4")
+  playerHometownEl.innerHTML = `${player.hometown}`
+  h2.appendChild(playerHometownEl)
 
 }
 
@@ -123,7 +136,8 @@ function addPlayer(player) {
 //what do we do after saveTeam?
 
 function saveTeam(team) {
-  return (
+  // debugger
+    //return (
         fetch(TEAMS_URL, {
           method: "POST",
           headers: {
@@ -132,7 +146,14 @@ function saveTeam(team) {
           },
           body: JSON.stringify(team)
         })
-      )
+      // )
+      .then(response => {
+        response.json()})
+      .then(
+        json =>
+          console.log(team))
+      .catch(error => console.log(error))    
+
 }
 
 function savePlayer(player) {
