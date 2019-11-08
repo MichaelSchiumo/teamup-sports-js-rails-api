@@ -66,7 +66,6 @@ function handleFormSubmission(e) {
     position: e.target.elements.position.value,
     number: e.target.elements.number.value,
     hometown: e.target.elements.hometown.value,
-    captain: e.target.elements.captain.value
   }
 
   savePlayer(playerData)

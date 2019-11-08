@@ -1,5 +1,6 @@
 const generateTeamForm = () => {
   //use css
+
     const form = document.createElement('form')
     // const formInput = document.createElement('input')
     const formSubmit = document.createElement('button')
@@ -8,6 +9,9 @@ const generateTeamForm = () => {
     //append inputs to form
     form.id = "create-team"
     formSubmit.id = "form-submit"
+
+    const currentRoster = document.createElement('h2')
+    currentRoster.textContent = "Current Rosters"
 
     let nameInput = document.createElement("input")
     nameInput.setAttribute('name', 'name')
@@ -25,6 +29,8 @@ const generateTeamForm = () => {
     form.appendChild(rankInput)
 
     form.appendChild(formSubmit)
+
+    form.appendChild(currentRoster)
 
     return form
 }
