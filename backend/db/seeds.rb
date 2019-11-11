@@ -44,4 +44,4 @@ Player.create(:team_id => "2", :name => "Chong", :hometown => "Amsterdam, Nether
 
 Player.create(:team_id => "3", :name => "Messi", :hometown => "Rosario, Argentina", :position => "Forward", :number => 10)
 Player.create(:team_id => "3", :name => "Arthur", :hometown => "Goiania, Brazil", :position => "Midfield", :number => 8)
-# Player.create(:team_id => "3", :name => "Christensen", :hometown => "Lillerod, Denmark", :position => "Defender", :number => 4)
+Player.create(:team_id => "3", :name => "Christensen", :hometown => "Lillerod, Denmark", :position => "Defender", :number => 4)
