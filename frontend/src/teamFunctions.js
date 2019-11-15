@@ -79,6 +79,9 @@ function fetchTeams() {
             },
             body: JSON.stringify(team)
           })
-      )
-
+      ).then(response => response.json())
+      .then(json => {
+        let newTeam = new Team(json.data.attributes)
+        newTeam.render()
+      })
   }

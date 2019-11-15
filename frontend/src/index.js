@@ -50,9 +50,8 @@ function pageLoad() {
 
 
     saveTeam(teamData);
-    addTeam(teamData);
+    // addTeam(teamData);
   })
-
 };
 
 pageLoad()

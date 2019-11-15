@@ -29,10 +29,10 @@ function savePlayer(playerData) {
 function renderPlayers(playersArray, team_id) {
   playersArray.forEach(player => {
     let newPlayer = new Player(player)
-    debugger
+
     // addPlayer(newPlayer)
   })
-  console.log(allPlayers)
+  // console.log(allPlayers)
 }
 
 

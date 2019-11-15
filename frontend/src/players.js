@@ -10,4 +10,5 @@ class Player {
     allPlayers.push(this)
   }
 
+
 }
