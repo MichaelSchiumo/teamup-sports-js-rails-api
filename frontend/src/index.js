@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:3001";
 const TEAMS_URL = `${BASE_URL}/teams`;
 const PlAYERS_URL = `${BASE_URL}/players`;
 
